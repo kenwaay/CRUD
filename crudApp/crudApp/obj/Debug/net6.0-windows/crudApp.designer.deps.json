@@ -6,6 +6,35 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+      "EntityFrameworkCore.Exceptions.Common/6.0.3": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.6"
+        },
+        "runtime": {
+          "lib/net6.0/EntityFramework.Exceptions.Common.dll": {
+            "assemblyVersion": "6.0.3.0",
+            "fileVersion": "6.0.3.0"
+          }
+        }
+      },
+      "EntityFrameworkCore.Exceptions.Sqlite/6.0.3": {
+        "dependencies": {
+          "EntityFrameworkCore.Exceptions.Common": "6.0.3",
+          "Microsoft.Data.Sqlite": "6.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/EntityFramework.Exceptions.Sqlite.dll": {
+            "assemblyVersion": "6.0.3.0",
+            "fileVersion": "6.0.3.0"
+          }
+        }
+      },
+      "Microsoft.Data.Sqlite/6.0.3": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "6.0.6",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.6"
+        }
+      },
       "Microsoft.Data.Sqlite.Core/6.0.6": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.6"
@@ -372,6 +401,27 @@
     }
   },
   "libraries": {
+    "EntityFrameworkCore.Exceptions.Common/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nciNKB1xMYO5a9P6rvLttCFVWa+2gwaEeuKtBaQqO24CnhNXudOZ13P1/6jSlcmy3TdbUbB1LEwJFec2n/zGrQ==",
+      "path": "entityframeworkcore.exceptions.common/6.0.3",
+      "hashPath": "entityframeworkcore.exceptions.common.6.0.3.nupkg.sha512"
+    },
+    "EntityFrameworkCore.Exceptions.Sqlite/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pUkX0exR5ZntDyXKM1P+VbVmbHDNovKSEcP6k85XJ6GKC8ZG3c+jhazpe7UBHjPQBqJJYdtIxlqPBepyYOry2g==",
+      "path": "entityframeworkcore.exceptions.sqlite/6.0.3",
+      "hashPath": "entityframeworkcore.exceptions.sqlite.6.0.3.nupkg.sha512"
+    },
+    "Microsoft.Data.Sqlite/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7KR/Jde8nsii7aKWkT7VBmbOM6XuXD8tNImA0C69qPygtcNZXhqryVlINsQwd1FcpjCFXdBUjagml0I8MJ8++w==",
+      "path": "microsoft.data.sqlite/6.0.3",
+      "hashPath": "microsoft.data.sqlite.6.0.3.nupkg.sha512"
+    },
     "Microsoft.Data.Sqlite.Core/6.0.6": {
       "type": "package",
       "serviceable": true,

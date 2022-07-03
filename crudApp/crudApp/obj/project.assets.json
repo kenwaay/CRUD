@@ -2,6 +2,44 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "EntityFrameworkCore.Exceptions.Common/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.3"
+        },
+        "compile": {
+          "lib/net6.0/EntityFramework.Exceptions.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/EntityFramework.Exceptions.Common.dll": {}
+        }
+      },
+      "EntityFrameworkCore.Exceptions.Sqlite/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "EntityFrameworkCore.Exceptions.Common": "6.0.3",
+          "Microsoft.Data.SQLite": "6.0.3"
+        },
+        "compile": {
+          "lib/net6.0/EntityFramework.Exceptions.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/EntityFramework.Exceptions.Sqlite.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "6.0.3",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
       "Microsoft.Data.Sqlite.Core/6.0.6": {
         "type": "package",
         "dependencies": {
@@ -442,6 +480,49 @@
     }
   },
   "libraries": {
+    "EntityFrameworkCore.Exceptions.Common/6.0.3": {
+      "sha512": "nciNKB1xMYO5a9P6rvLttCFVWa+2gwaEeuKtBaQqO24CnhNXudOZ13P1/6jSlcmy3TdbUbB1LEwJFec2n/zGrQ==",
+      "type": "package",
+      "path": "entityframeworkcore.exceptions.common/6.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "License.md",
+        "entityframeworkcore.exceptions.common.6.0.3.nupkg.sha512",
+        "entityframeworkcore.exceptions.common.nuspec",
+        "lib/net6.0/EntityFramework.Exceptions.Common.dll",
+        "lib/net6.0/EntityFramework.Exceptions.Common.pdb"
+      ]
+    },
+    "EntityFrameworkCore.Exceptions.Sqlite/6.0.3": {
+      "sha512": "pUkX0exR5ZntDyXKM1P+VbVmbHDNovKSEcP6k85XJ6GKC8ZG3c+jhazpe7UBHjPQBqJJYdtIxlqPBepyYOry2g==",
+      "type": "package",
+      "path": "entityframeworkcore.exceptions.sqlite/6.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "License.md",
+        "entityframeworkcore.exceptions.sqlite.6.0.3.nupkg.sha512",
+        "entityframeworkcore.exceptions.sqlite.nuspec",
+        "lib/net6.0/EntityFramework.Exceptions.Sqlite.dll",
+        "lib/net6.0/EntityFramework.Exceptions.Sqlite.pdb"
+      ]
+    },
+    "Microsoft.Data.Sqlite/6.0.3": {
+      "sha512": "7KR/Jde8nsii7aKWkT7VBmbOM6XuXD8tNImA0C69qPygtcNZXhqryVlINsQwd1FcpjCFXdBUjagml0I8MJ8++w==",
+      "type": "package",
+      "path": "microsoft.data.sqlite/6.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/_._",
+        "microsoft.data.sqlite.6.0.3.nupkg.sha512",
+        "microsoft.data.sqlite.nuspec"
+      ]
+    },
     "Microsoft.Data.Sqlite.Core/6.0.6": {
       "sha512": "FGMTc3w380mXGBqygWtWIMJYwhckjZe6Ee0Eq9ClzspXuz87Ks8hey/f1g/gIUpV8/r0HirI2knhomcfuOMJrw==",
       "type": "package",
@@ -1072,6 +1153,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "EntityFrameworkCore.Exceptions.Sqlite >= 6.0.3",
       "Microsoft.EntityFrameworkCore >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.6",
       "Microsoft.Extensions.DependencyInjection >= 6.0.0"
@@ -1116,6 +1198,10 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "EntityFrameworkCore.Exceptions.Sqlite": {
+            "target": "Package",
+            "version": "[6.0.3, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.6, )"
