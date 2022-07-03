@@ -53,3 +53,5 @@ D:\CRUD\crudApp\crudApp\obj\Debug\net6.0-windows\refint\crudApp.dll
 D:\CRUD\crudApp\crudApp\obj\Debug\net6.0-windows\crudApp.pdb
 D:\CRUD\crudApp\crudApp\obj\Debug\net6.0-windows\crudApp.genruntimeconfig.cache
 D:\CRUD\crudApp\crudApp\obj\Debug\net6.0-windows\ref\crudApp.dll
+D:\CRUD\crudApp\crudApp\bin\Debug\net6.0-windows\EntityFramework.Exceptions.Common.dll
+D:\CRUD\crudApp\crudApp\bin\Debug\net6.0-windows\EntityFramework.Exceptions.Sqlite.dll

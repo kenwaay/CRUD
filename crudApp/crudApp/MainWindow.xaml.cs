@@ -22,18 +22,31 @@ namespace crudApp
     public partial class MainWindow : Window
     {
         ProductDbContex dbContex;
+        Product NewProduct = new Product();
 
         public MainWindow(ProductDbContex dbContext)
         {
             this.dbContex = dbContext;
             InitializeComponent();
             GetProduct();
+
+            AddNewProductGrid.DataContext = NewProduct;
         }
 
-        //read action
+        //Read action
         private void GetProduct()
         {
             ProductList.ItemsSource = dbContex.products.ToList();
+        }
+
+        //Add action
+        private void AddProduct(object s, RoutedEventArgs e)
+        {
+            dbContex.products.Add(NewProduct);
+            dbContex.SaveChanges();
+            GetProduct();
+            NewProduct = new Product();
+            AddNewProductGrid.DataContext = NewProduct; 
         }
 
     }

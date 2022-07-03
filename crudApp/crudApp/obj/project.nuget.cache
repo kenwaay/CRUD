@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "GZ97+xvTakO4e+zoysGiVaa6VZoURnD9IoMfJ+elIM1rLQskZr/HZuE8a3BiE96ZkSArp5rVXhs0M91rw62MhA==",
+  "dgSpecHash": "bCkxcrIUFISMtSxegfr4sQ6DoSiLhMTQZwiHP7Xkj9HPWMtlRt6DA16gBXBRiC27N1d5n3s3sqztcm0DiAq2jQ==",
   "success": true,
   "projectFilePath": "D:\\CRUD\\crudApp\\crudApp\\crudApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dawid\\.nuget\\packages\\entityframeworkcore.exceptions.common\\6.0.3\\entityframeworkcore.exceptions.common.6.0.3.nupkg.sha512",
+    "C:\\Users\\Dawid\\.nuget\\packages\\entityframeworkcore.exceptions.sqlite\\6.0.3\\entityframeworkcore.exceptions.sqlite.6.0.3.nupkg.sha512",
+    "C:\\Users\\Dawid\\.nuget\\packages\\microsoft.data.sqlite\\6.0.3\\microsoft.data.sqlite.6.0.3.nupkg.sha512",
     "C:\\Users\\Dawid\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.6\\microsoft.data.sqlite.core.6.0.6.nupkg.sha512",
     "C:\\Users\\Dawid\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.6\\microsoft.entityframeworkcore.6.0.6.nupkg.sha512",
     "C:\\Users\\Dawid\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.6\\microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512",
