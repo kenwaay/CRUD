@@ -22,7 +22,6 @@ namespace crudApp
     public partial class MainWindow : Window
     {
         ProductDbContex dbContex;
-        Product NewProduct = new Product();
 
         public MainWindow(ProductDbContex dbContext)
         {
@@ -31,9 +30,10 @@ namespace crudApp
             GetProduct();
         }
 
+        //read action
         private void GetProduct()
         {
-            ProductDG.ItemSource = dbContex.products.ToList();
+            ProductList.ItemsSource = dbContex.products.ToList();
         }
 
     }
