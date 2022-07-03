@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using crudApp.data;
 
 namespace crudApp
 {
@@ -20,9 +21,21 @@ namespace crudApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        ProductDbContex dbContex;
+        Product NewProduct = new Product();
+
+        public MainWindow(ProductDbContex dbContext)
         {
+            this.dbContex = dbContext;
             InitializeComponent();
+            GetProduct();
         }
+
+        private void GetProduct()
+        {
+            ProductDG.ItemSource = dbContex.products.ToList();
+        }
+
     }
 }
+
