@@ -64,6 +64,15 @@ namespace crudApp
             GetProduct();
         }
 
+        //Delete Action
+        private void DeleteProduct(object s, RoutedEventArgs e) //update button click
+        {
+            var productToBeDeleted = (s as FrameworkElement).DataContext as Product;
+            dbContex.products.Remove(productToBeDeleted);
+            dbContex.SaveChanges();
+            GetProduct();
+        }
+
     }
 }
 
