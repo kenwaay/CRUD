@@ -1,12 +1,141 @@
-﻿<Window x:Class="crudApp.MainWindow"
+﻿<Window x:Class="WpfAppDemoCRUD.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:crudApp"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:local="clr-namespace:WpfAppDemoCRUD"
+        mc:Ignorable="d" Background="#1e1e1e" 
+        Title="MainWindow" Height="500" Width="1024">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Foreground="#ffffff" Grid.Row="0" Padding="50 0" FontWeight="Bold" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"  Content="CRUD APP"/>
+
+        <DataGrid Background="#2e2e2e" Grid.Row="1" AutoGenerateColumns="False" Name="ProductDG" IsReadOnly="True">
+            <DataGrid.Columns >
+                <DataGridTextColumn Foreground="#ffffff" Header="Product ID" Binding="{Binding ID}">
+                    
+                </DataGridTextColumn>
+                <DataGridTextColumn Foreground="#ffffff" Header="Model" Binding="{Binding Model}">
+                    
+                </DataGridTextColumn>
+                <DataGridTextColumn Foreground="#ffffff" Header="Manufacturer" Binding="{Binding Manufacturer}">
+                    
+                </DataGridTextColumn>
+                <DataGridTextColumn Foreground="#ffffff" Header="Category" Binding="{Binding Category}">
+                    
+                </DataGridTextColumn>
+                <DataGridTextColumn Foreground="#ffffff" Header="Price" Binding="{Binding Price}">
+                    
+                </DataGridTextColumn>
+
+                <DataGridTemplateColumn  Header="Update Product">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button  Content="Edit" Click="UpdateProductForEdit"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Delete Product">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Click="DeleteProduct"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" BorderThickness="1" Margin="5">
+                <StackPanel Margin="5">
+                    <Label Foreground="#ffffff" Content="Add new product" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <Grid Margin="5" x:Name="AddNewProductGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Foreground="#ffffff" Grid.Row="0" Grid.Column="0" Content="Model"/>
+                        <TextBox Foreground="#ffffff" Background="#3e3e42" Grid.Row="0" Grid.Column="1" Text="{Binding Model}"/>
+
+                        <Label Foreground="#ffffff" Grid.Row="1" Grid.Column="0" Content="Manufacturer"/>
+                        <TextBox Foreground="#ffffff" Background="#3e3e42" Grid.Row="1" Grid.Column="1" Text="{Binding Manufacturer}"/>
+
+                        <Label Foreground="#ffffff" Grid.Row="2" Grid.Column="0" Content="Category"/>
+                        <TextBox Foreground="#ffffff" Background="#3e3e42" Grid.Row="2" Grid.Column="1" Text="{Binding Category}"/>
+
+                        <Label Foreground="#ffffff" Grid.Row="3" Grid.Column="0" Content="Price"/>
+                        <TextBox Foreground="#ffffff" Background="#3e3e42" Grid.Row="3" Grid.Column="1" Text="{Binding Price}"/>
+
+                        <Button Foreground="#ffffff" Background="#3e3e42" Grid.Row="4" Grid.ColumnSpan="1" Content="Add" Margin="5" Click="AddProduct"/>
+
+                    </Grid>
+
+                </StackPanel>
+            </Border>
+
+
+            <Border Grid.Column="1" BorderThickness="1" Margin="5">
+                <StackPanel Margin="5">
+                    <Label Foreground="#ffffff" Content="Update product" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <Grid Margin="5" x:Name="UpdateProductGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Foreground="#ffffff" Grid.Row="0" Grid.Column="0" Content="Model"/>
+                        <TextBox Foreground="#ffffff" Background="#3e3e42" Grid.Row="0" Grid.Column="1" Text="{Binding Model}"/>
+
+                        <Label Foreground="#ffffff" Grid.Row="1" Grid.Column="0" Content="Manufacturer"/>
+                        <TextBox Foreground="#ffffff" Background="#3e3e42" Grid.Row="1" Grid.Column="1" Text="{Binding Manufacturer}"/>
+
+                        <Label Foreground="#ffffff" Grid.Row="2" Grid.Column="0" Content="Category"/>
+                        <TextBox Foreground="#ffffff" Background="#3e3e42" Grid.Row="2" Grid.Column="1" Text="{Binding Category}"/>
+
+                        <Label Foreground="#ffffff" Grid.Row="3" Grid.Column="0" Content="Price"/>
+                        <TextBox Foreground="#ffffff" Background="#3e3e42" Grid.Row="3" Grid.Column="1" Text="{Binding Price}"/>
+
+                        <Button Foreground="#ffffff" Background="#3e3e42" Grid.Row="4" Grid.ColumnSpan="1" Content="Update" Margin="5" Click="UpdateProduct"/>
+
+                    </Grid>
+
+                </StackPanel>
+            </Border>
+
+        </Grid>
 
     </Grid>
 </Window>
