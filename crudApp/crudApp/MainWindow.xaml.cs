@@ -48,6 +48,21 @@ namespace crudApp
             NewProduct = new Product();
             AddNewProductGrid.DataContext = NewProduct; 
         }
+        //Update action
+
+        Product selectedProduct = new Product();
+        private void UpdateProductForEdit(object s, RoutedEventArgs e)
+        {
+            selectedProduct = (s as FrameworkElement).DataContext as Product;
+            UpdateProductGrid.DataContext = selectedProduct;
+            
+        }
+        private void UpdateProduct(object s, RoutedEventArgs e) //update button click
+        {
+            dbContex.Update(selectedProduct);
+            dbContex.SaveChanges();
+            GetProduct();
+        }
 
     }
 }
