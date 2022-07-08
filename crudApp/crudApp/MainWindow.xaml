@@ -15,7 +15,7 @@
 
         <Label Foreground="#ffffff" Grid.Row="0" Padding="50 0" FontWeight="Bold" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center"  Content="CRUD APP"/>
 
-        <DataGrid Background="#2e2e2e" Grid.Row="1" AutoGenerateColumns="False" Name="ProductList" IsReadOnly="True">
+        <DataGrid Margin="20 0" Background="#2e2e2e" Grid.Row="1" AutoGenerateColumns="False" Name="ProductList" IsReadOnly="True">
             <DataGrid.Columns >
                 <DataGridTextColumn Foreground="#2e2e2e" Header="Product ID" Binding="{Binding ID}">
 
